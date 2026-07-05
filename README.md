@@ -1,204 +1,325 @@
-# 📊 Data Science 2026 — Jurnal Pembelajaran
+# 📊 Data Science 2026 — Angga Anggieanie
 
-> Repository ini berisi tugas praktikum mata kuliah **Pengantar Data Science** — merekam perjalanan belajar dari dasar Python hingga Machine Learning pertama.
-
----
-
-## 👤 Identitas
+> Repositori ini mendokumentasikan perjalanan belajar mata kuliah **Pengantar Data Science** semester genap 2025/2026.
 
 | | |
 |---|---|
 | **Nama** | Angga Anggieanie |
 | **NIM** | 250401020172 |
-| **Kelas** | IF401 — PJJ Informatika |
+| **Kelas** | IF401 |
 | **Mata Kuliah** | Pengantar Data Science (200302305) |
+| **SKS** | 3 SKS |
+| **Koordinator** | Syahid Abdullah, S.Si, M.Kom |
+| **Program Studi** | Informatika |
 
 ---
 
-## 🗺️ Peta Perjalanan Belajar
+## 🗂️ Daftar Pertemuan
 
-```
-Pertemuan 1  →  Pertemuan 2  →  Pertemuan 3  →  Pertemuan 4
-Python Dasar    EDA & Pandas    Data Cleaning   Statistika
-
-Pertemuan 5  →  Pertemuan 6  →  Pertemuan 7
-Visualisasi     Preprocessing   Machine Learning
-```
-
----
-
-## 📚 Ringkasan Per Pertemuan
-
-### Pertemuan 1 — Python Dasar untuk Data Science
-📄 [`Pertemuan1_ANGGA-ANGGIEANIE_250401020172.ipynb`](Pertemuan1_ANGGA-ANGGIEANIE_250401020172.ipynb)
-
-Notebook pertama: berkenalan dengan Python sebagai alat utama Data Science.
-
-**Topik yang dipelajari:**
-- Output sederhana dengan `print()`
-- Variabel dan tipe data dasar: `str`, `int`, `float`, `bool`
-- F-string untuk menyisipkan variabel ke dalam teks
-- List dan perulangan `for` dengan `enumerate()`
-- Membuat fungsi dengan `def` dan `return`
-
-**Tools yang diperkenalkan:** Python · Google Colab · Jupyter Notebook · GitHub
+| Pertemuan | Topik | Dataset | Notebook |
+|-----------|-------|---------|----------|
+| 1 | Pengantar Python untuk Data Science | — | `Pertemuan1_*.ipynb` |
+| 2 | NumPy & Pandas | — | `Pertemuan2_*.ipynb` |
+| 3 | Data Cleaning | — | `Pertemuan3_*.ipynb` |
+| 4 | Statistika Dasar & Analisis Data | Iris | `Pertemuan4_Angga_Anggieanie_250401020172.ipynb` |
+| 5 | Visualisasi Data | Penguins | `Pertemuan5_Angga_Anggieanie_250401020172.ipynb` |
+| 6 | Persiapan Data | Titanic | `Pertemuan6_Angga_Anggieanie_250401020172.ipynb` |
+| 7 | Pengantar ML: Regresi Linear | Gaji Sintetis | `Pertemuan7_Angga_Anggieanie_250401020172.ipynb` |
+| 9 | Algoritma Klasifikasi (Bagian 1) | Breast Cancer Wisconsin | `Pertemuan9_Angga_Anggieanie_250401020172.ipynb` |
+| 10 | Algoritma Klasifikasi (Bagian 2) — Ensemble | Telco Customer Churn | `Pertemuan10_Angga_Anggieanie_250401020172.ipynb` |
+| 11 | Unsupervised Learning: Clustering | Segmentasi Pelanggan | `Pertemuan11_Angga_Anggieanie_250401020172.ipynb` |
 
 ---
 
-### Pertemuan 2 — Eksplorasi Data Awal (EDA) dengan Pandas
-📄 [`Pertemuan2_ANGGA-ANGGIEANIE_250401020172.ipynb`](Pertemuan2_ANGGA-ANGGIEANIE_250401020172.ipynb)
+## 📚 Ringkasan Materi per Pertemuan
 
-Dataset: **Titanic** (891 penumpang, 12 kolom) — diakses langsung dari URL.
+### Pertemuan 1 — Pengantar Python untuk Data Science
+Materi dasar pemrograman Python yang relevan untuk data science: tipe data, struktur kontrol, fungsi, dan pengenalan ekosistem library (NumPy, Pandas, Matplotlib).
 
-**Topik yang dipelajari:**
-- Memuat dataset CSV dari URL dengan `pd.read_csv()`
-- Inspeksi struktur data: `shape`, `columns`, `head()`
-- Analisis *missing values* (jumlah & persentase): `Age` 19.9%, `Cabin` 77.1%
-- Filtering data: wanita kelas 1 (`Sex == 'female'` & `Pclass == 1`)
-- Agregasi dengan `groupby()` dan `mean()`
-- Analisis tingkat keselamatan: Kelas 1 (63%) vs Kelas 3 (24%), wanita (74%) vs pria (19%)
+### Pertemuan 2 — NumPy & Pandas
+Operasi array dengan NumPy (indexing, broadcasting, operasi vektor) dan manipulasi DataFrame dengan Pandas (seleksi kolom, filtering, groupby, merge).
 
-**Library:** `pandas` · `numpy`
-
----
-
-### Pertemuan 3 — Data Cleaning: Missing Values, Outlier & Ekstraksi Data
-📄 [`Pertemuan3_angga_anggieanie_250401020172.ipynb`](Pertemuan3_angga_anggieanie_250401020172.ipynb)
-
-Dataset: **housing_dirty.csv** (properti dengan data kotor) + REST API JSONPlaceholder.
-
-**Topik yang dipelajari:**
-- Menghapus baris duplikat dengan `drop_duplicates()`
-- Normalisasi string: `str.strip()`, `str.title()`, `str.lower()`
-- Imputasi *missing values*: median untuk numerik, modus untuk kategorik
-- Penanganan outlier dengan metode **IQR Fence** (`clip(lower, upper)`)
-- Validasi data bersih dengan `assert`
-- Mengakses **REST API** dengan `requests.get()` dan `pd.json_normalize()`
-- Ekspor dataset bersih ke CSV
-
-**Library:** `pandas` · `numpy` · `scipy` · `requests`
+### Pertemuan 3 — Data Cleaning
+Penanganan data kotor di dunia nyata: deteksi dan penanganan missing values, duplikat, tipe data tidak konsisten, dan outlier menggunakan Pandas.
 
 ---
 
 ### Pertemuan 4 — Statistika Dasar & Analisis Data
-📄 [`Pertemuan4_Angga_Anggieanie_250401020172.ipynb`](Pertemuan4_Angga_Anggieanie_250401020172.ipynb)
 
-Dataset: **Iris** (150 sampel bunga, 4 fitur numerik, 3 spesies) via `seaborn`.
+**Dataset:** Iris (150 baris, 5 kolom — sepal_length, sepal_width, petal_length, petal_width, species)
 
 **Topik yang dipelajari:**
-- Statistik deskriptif lengkap: mean, median, std, varians, **skewness**, **kurtosis**
-- Interpretasi distribusi: `petal_length` dan `petal_width` menunjukkan distribusi bimodal (kurtosis ≈ -1.4)
-- Analisis distribusi dengan **Histogram + KDE**, garis mean & median
-- Analisis korelasi antar fitur numerik
-- Uji statistik **t-test** (scipy) untuk membandingkan antar kelompok
-- Visualisasi **boxplot** per spesies
+- Ukuran pemusatan: mean, median, modus
+- Ukuran penyebaran: varians, standar deviasi, IQR, kuartil
+- Distribusi data: skewness & kurtosis
+- Analisis univariat: histogram + KDE, boxplot, violin plot
+- Analisis bivariat: scatter plot, korelasi Pearson & Spearman, heatmap
 
-**Library:** `pandas` · `numpy` · `matplotlib` · `seaborn` · `scipy`
+**Temuan utama:**
+- `petal_length` ↔ `petal_width`: r = **0.963** (sangat kuat positif) — pasangan paling berkorelasi
+- `sepal_width` ↔ `petal_length`: r = **−0.428** (negatif lemah) — pasangan terendah
+- Distribusi bimodal pada kolom petal karena pemisahan *Setosa* vs dua spesies lain
+
+**Tools:** `pandas`, `numpy`, `scipy`, `matplotlib`, `seaborn`
 
 ---
 
 ### Pertemuan 5 — Visualisasi Data
-📄 [`Pertemuan5_Angga_Anggieanie_250401020172.ipynb`](Pertemuan5_Angga_Anggieanie_250401020172.ipynb)
 
-Dataset: **Penguins** (344 baris, 3 spesies penguin di Kepulauan Palmer, Antarktika).
+**Dataset:** Penguins (344 baris, 7 kolom; 333 setelah dropna) — 3 spesies dari Kepulauan Palmer, Antarktika
 
 **Topik yang dipelajari:**
-- Setup tema global Seaborn (`set_theme`, `whitegrid`, `Set2`)
-- Membersihkan data dengan `dropna()` → 333 baris bersih
-- **Bar Chart**: rata-rata massa tubuh per spesies (sumbu dari 0 — prinsip akurasi)
-- **Scatter Plot**: hubungan panjang paruh vs panjang sirip per spesies
-- **Histogram + KDE**: distribusi berat badan per spesies
-- **Heatmap Korelasi**: matrix korelasi antar fitur numerik
-- Dashboard multi-grafik dengan `GridSpec`
+- 5 prinsip visualisasi efektif: Clarity, Accuracy, Efficiency, Aesthetics, Context
+- Matplotlib: Figure/Axes architecture, bar chart, line chart, scatter plot
+- Seaborn: histplot+KDE, boxplot, violin plot, scatter plot, pair plot
+- Framework interpretasi: **What? / So what? / Now what?**
+- Dashboard statis 2×2 dengan `GridSpec`
 
-**Library:** `pandas` · `numpy` · `matplotlib` · `seaborn`
+**Hasil utama:**
+- Gentoo ≈ 5.076 g (rata-rata massa tubuh, ~37% lebih berat dari Adelie/Chinstrap)
+- Distribusi massa tubuh: bimodal, skewness +0.47
+- Panjang flipper Gentoo (median ≈ 216 mm) terpisah jelas dari dua spesies lain
+- Korelasi flipper vs massa tubuh: **r = 0.873** (kuat positif)
+
+**Output:** `dashboard_penguins.png` (dpi=150)
+
+**Tools:** `matplotlib`, `seaborn`, `pandas`, `numpy`
 
 ---
 
-### Pertemuan 6 — Persiapan Data (End-to-End Preprocessing Pipeline)
-📄 [`Pertemuan6_Angga_Anggieanie_250401020172.ipynb`](Pertemuan6_Angga_Anggieanie_250401020172.ipynb)
+### Pertemuan 6 — Persiapan Data
 
-Dataset: **Titanic** (dataset yang sama dari pertemuan 2, kali ini difokuskan untuk pemodelan ML).
+**Dataset:** Titanic (891 baris, target: `survived`)
 
 **Topik yang dipelajari:**
-- EDA singkat: 177 missing `age` (~20%), 2 missing `embarked`, target `survived` imbalanced (61.6% vs 38.4%)
-- **Handling Missing Values**: median untuk `age` (28.0), modus 'S' untuk `embarked`
-- **One-Hot Encoding** kolom nominal dengan `pd.get_dummies()` + `drop_first=True` (hindari dummy variable trap)
-- **Train-Test Split** stratified 80:20 → 712 train / 179 test (`stratify=y`)
-- **Feature Scaling** dengan `StandardScaler`: `fit_transform()` hanya pada train, `transform()` pada test
-- Konsep penting: **mencegah data leakage** — split sebelum scaling, test set tidak pernah digunakan untuk fit
+- Pipeline preprocessing yang benar: EDA → handling missing → encoding → split → scaling
+- One-Hot Encoding dengan `drop_first=True` (hindari dummy variable trap)
+- Handling missing: `fillna(median)` untuk `age`, `fillna(mode)` untuk `embarked`
+- Stratified train-test split: menjaga proporsi kelas di train dan test
+- Feature scaling: StandardScaler — **fit hanya pada training set**, transform pada test
+- **Prinsip anti data leakage:** split dulu, baru fit scaler pada X_train
 
-**Library:** `pandas` · `numpy` · `seaborn` · `sklearn`
+**Hasil preprocessing:**
+- `age` 177 NaN → diisi median **28.0**; `embarked` 2 NaN → diisi modus **'S'**
+- Encoding: `sex` → `sex_male`; `embarked` → `embarked_Q`, `embarked_S`
+- Split stratified: **712 train / 179 test**; proporsi survived ≈ 0.616:0.384 identik di keduanya
+- Kolom numerik ter-scale: mean ≈ 0, std ≈ 1 pada training set
+
+**Tools:** `pandas`, `seaborn`, `sklearn` (OHE, StandardScaler, train_test_split)
 
 ---
 
 ### Pertemuan 7 — Pengantar Machine Learning: Regresi Linear
-📄 [`Pertemuan7_Angga_Anggieanie_250401020172.ipynb`](Pertemuan7_Angga_Anggieanie_250401020172.ipynb)
 
-Dataset: **Gaji Sintetis** (300 baris, dibuat dengan `np.random.seed(42)` untuk reproducibility).
-
-**Formula dataset:**
-```
-gaji = 3.0 + 2.2×pengalaman + 1.5×edu + 4.0×(kota=='Jakarta') + noise
-```
+**Dataset:** Gaji sintetis (300 baris, `np.random.seed(42)`)  
+Formula: `gaji = 3.0 + 2.2×pengalaman + 1.5×edu + 4.0×(Jakarta) + N(0,2)`
 
 **Topik yang dipelajari:**
-- Membuat dataset sintetis yang realistis dengan `numpy`
-- Visualisasi scatter plot hubungan pengalaman vs gaji per kota
-- Pipeline prediksi gaji end-to-end dengan **Linear Regression**
-- Evaluasi model: MAE, MSE, RMSE, R²
-- Interpretasi koefisien model
+- Supervised vs Unsupervised Learning; Classification vs Regression
+- Persamaan regresi linear: ŷ = β₀ + β₁x₁ + … + βₙxₙ
+- Cost function MSE dan Ordinary Least Squares (OLS)
+- Implementasi scikit-learn: pola Fit → Predict → Evaluate
+- Metrik evaluasi: MAE, RMSE, R²
+- Visualisasi: Actual vs Predicted plot, Residual Plot
 
-**Library:** `numpy` · `pandas` · `matplotlib` · `seaborn` · `sklearn`
+**Hasil model (Multiple Linear Regression):**
+
+| Parameter | Nilai |
+|-----------|-------|
+| β₀ (intercept) | 27.514 |
+| β pengalaman | 13.042 (dominan) |
+| β kota_Jakarta | 1.837 |
+| β edu | 1.188 |
+| β kota_Surabaya | −0.292 |
+
+| Metrik | Nilai |
+|--------|-------|
+| MAE | 1.649 juta Rp |
+| RMSE | 2.123 juta Rp |
+| **R²** | **0.974 (97.4%)** |
+
+Residual plot acak → asumsi linearitas terpenuhi. Model sangat baik sebagai baseline.
+
+**Output:** `evaluasi_regresi.png`
+
+**Tools:** `numpy`, `pandas`, `matplotlib`, `seaborn`, `sklearn`
 
 ---
 
-## 🛠️ Stack Teknologi
+### Pertemuan 9 — Algoritma Klasifikasi (Bagian 1)
 
-| Kategori | Tools |
-|---|---|
-| Bahasa | Python 3 |
-| Lingkungan | Google Colab · Jupyter Notebook |
-| Data Manipulation | `pandas` · `numpy` |
-| Visualisasi | `matplotlib` · `seaborn` |
-| Statistik | `scipy` |
-| Machine Learning | `scikit-learn` |
-| Data Akses | `requests` (REST API) |
-| Version Control | Git · GitHub |
+**Dataset:** Breast Cancer Wisconsin — bawaan scikit-learn  
+569 sampel, 30 fitur numerik (ukuran & tekstur sel), target biner: 0 = Malignant (ganas), 1 = Benign (jinak)
+
+**Topik yang dipelajari:**
+- Klasifikasi vs Regresi: output kategori diskret vs nilai kontinu
+- Binary vs Multiclass Classification
+- **Logistic Regression:** fungsi Sigmoid σ(z) = 1/(1+e⁻ᶻ), decision boundary, threshold
+- **Decision Tree:** Gini Impurity, Entropy, overfitting & max_depth, feature importance, plot_tree
+- **Metrik evaluasi klasifikasi:** Confusion Matrix (TP/TN/FP/FN), Accuracy, Precision, Recall, F1-Score
+- Kapan menggunakan metrik mana: Recall untuk diagnosis medis, Precision untuk spam filter
+
+**Preprocessing:**
+- Stratified split 80:20 → **455 train / 114 test**
+- StandardScaler fit pada training set (untuk Logistic Regression); Decision Tree tanpa scaling
+
+**Perbandingan hasil dua model pada test set:**
+
+| Model | Accuracy | Precision | Recall | F1-Score | FN (terlewat) |
+|-------|----------|-----------|--------|----------|---------------|
+| **Logistic Regression** | **98.2%** | **98.6%** | **98.6%** | **98.6%** | **1** |
+| Decision Tree (depth=4) | 92.1% | 94.4% | 93.1% | 93.7% | 5 |
+
+**Kesimpulan kritis:** Recall adalah metrik paling penting untuk diagnosis kanker — False Negative (kanker terlewat) berakibat fatal. Logistic Regression unggul dengan hanya **1 kasus terlewat** vs 5 pada Decision Tree. Fitur `worst radius` (importance 75.1%) adalah pembeda utama pada Decision Tree.
+
+**Output:** `evaluasi_klasifikasi.png`, `decision_tree_viz.png`
+
+**Tools:** `sklearn` (LogisticRegression, DecisionTreeClassifier, confusion_matrix, classification_report), `matplotlib`, `seaborn`, `pandas`, `numpy`
 
 ---
 
-## 📈 Progres Pembelajaran
+### Pertemuan 10 — Algoritma Klasifikasi (Bagian 2): Ensemble Learning & Imbalanced Dataset
 
-| # | Pertemuan | Topik Utama | Dataset | Status |
+**Dataset:** Telco Customer Churn (sintetis, ~7.043 pelanggan, 19 fitur) — target `Churn` (Yes/No), proporsi churn ~21.5% (imbalanced)
+
+**Topik yang dipelajari:**
+- **Ensemble Learning:** menggabungkan banyak model (weak learners) untuk prediksi lebih kuat; Bagging (paralel, turunkan variance) vs Boosting (sekuensial, turunkan bias)
+- **Random Forest:** bootstrap sampling, random feature selection (√fitur), majority voting/aggregation, Out-of-Bag estimation
+- **Accuracy Paradox:** akurasi tinggi dapat menyembunyikan kegagalan total mendeteksi kelas minoritas
+- **Penanganan Imbalanced Dataset:** level data (Oversampling, **SMOTE**, Undersampling) vs level algoritma (`class_weight`, threshold tuning)
+- Metrik: Precision, Recall, F1-Score, ROC-AUC
+
+**Perbandingan 3 skenario penanganan imbalance (test set 1.409 sampel, fokus kelas Churn):**
+
+| Skenario | Accuracy | Recall | F1-Score | ROC-AUC |
 |---|---|---|---|---|
-| 1 | Pertemuan 1 | Python Dasar | — | ✅ Selesai |
-| 2 | Pertemuan 2 | EDA & Pandas | Titanic | ✅ Selesai |
-| 3 | Pertemuan 3 | Data Cleaning | Housing Dirty + API | ✅ Selesai |
-| 4 | Pertemuan 4 | Statistika Dasar | Iris | ✅ Selesai |
-| 5 | Pertemuan 5 | Visualisasi Data | Penguins | ✅ Selesai |
-| 6 | Pertemuan 6 | Data Preprocessing | Titanic | ✅ Selesai |
-| 7 | Pertemuan 7 | Regresi Linear | Gaji Sintetis | ✅ Selesai |
+| Baseline (tanpa penanganan) | 77.5% | 16.5% | 0.240 | 0.733 |
+| class_weight="balanced" | 77.6% | 15.5% | 0.230 | 0.734 |
+| **SMOTE** | 73.8% | **38.9%** | **0.390** | 0.721 |
+| class_weight + threshold=0.35 | — | **42.6%** | **0.417** | — |
+
+**Kesimpulan kritis:** Accuracy paradox terkonfirmasi — baseline berakurasi 77.5% namun melewatkan >80% churner nyata. SMOTE dan threshold tuning sama-sama efektif meningkatkan Recall. Fitur pendorong utama churn: `MonthlyCharges`, `TotalCharges`, `tenure` — pelanggan baru dengan tagihan tinggi paling berisiko.
+
+**Output:** `evaluasi_churn.png`, `feature_importance_churn.png`
+
+**Tools:** `sklearn` (RandomForestClassifier, roc_auc_score), `imbalanced-learn` (SMOTE), `matplotlib`, `seaborn`, `pandas`, `numpy`
 
 ---
 
-## 📂 Struktur Repository
+### Pertemuan 11 — Unsupervised Learning: Clustering (K-Means & Hierarchical)
+
+**Dataset:** Segmentasi Pelanggan sintetis (300 sampel, 3 kelompok tersembunyi) — fitur `pendapatan_tahunan`, `skor_belanja`, `usia`, `gender`
+
+**Topik yang dipelajari:**
+- Transisi dari Supervised ke **Unsupervised Learning** — menemukan struktur data tanpa label (y)
+- **K-Means Clustering:** fungsi objektif WCSS, algoritma iteratif Assignment-Update, inisialisasi `k-means++`
+- **Metode Elbow:** menentukan K optimal dari grafik WCSS vs K
+- **Silhouette Score:** validasi K optimal secara kuantitatif (rentang −1 hingga +1)
+- **Hierarchical Clustering:** Agglomerative vs Divisive, metode linkage (Single, Complete, Average, **Ward**), membaca dendrogram
+
+**Hasil penentuan K optimal:**
+- Metode Elbow: penurunan WCSS melandai tajam di **K=3**
+- Silhouette Score tertinggi: **K=3 (0.695)** — mengonfirmasi hasil Elbow
+
+**Hasil segmentasi (K-Means, K=3):**
+
+| Segmen | Pendapatan Tahunan | Skor Belanja | Jumlah |
+|---|---|---|---|
+| Hemat | ~29 juta | ~20 | 100 |
+| Menengah | ~71 juta | ~55 | 99 |
+| Boros/Premium | ~109 juta | ~84 | 101 |
+
+**Validasi silang:** Hierarchical Clustering (Ward linkage) menghasilkan pembagian 3 cluster yang sangat konsisten dengan K-Means — **Adjusted Rand Index = 0.99** (hampir identik sempurna).
+
+**Output:** `segmentasi_kmeans.png`, `dendrogram_pelanggan.png`
+
+**Tools:** `sklearn` (KMeans, AgglomerativeClustering, silhouette_score, adjusted_rand_score), `scipy.cluster.hierarchy` (dendrogram, linkage), `matplotlib`, `seaborn`, `pandas`, `numpy`
+
+---
+
+## 🛠️ Tech Stack
+
+```
+Python 3.10+
+├── NumPy          — komputasi numerik & array
+├── Pandas         — manipulasi DataFrame
+├── Matplotlib     — visualisasi dasar (Figure/Axes)
+├── Seaborn        — visualisasi statistik
+├── SciPy          — uji statistik (Pearson, Spearman)
+└── scikit-learn   — preprocessing & machine learning
+    ├── datasets: load_breast_cancer
+    ├── preprocessing: StandardScaler, OneHotEncoder
+    ├── model_selection: train_test_split
+    ├── linear_model: LinearRegression, LogisticRegression
+    ├── tree: DecisionTreeClassifier, plot_tree
+    ├── ensemble: RandomForestClassifier
+    ├── cluster: KMeans, AgglomerativeClustering
+    └── metrics: MAE, MSE, R², confusion_matrix, accuracy, precision, recall, F1,
+                 roc_auc_score, silhouette_score, adjusted_rand_score
+imbalanced-learn (imblearn)
+└── over_sampling: SMOTE
+scipy.cluster.hierarchy
+└── dendrogram, linkage (Ward)
+```
+
+---
+
+## 📁 Struktur Repositori
 
 ```
 data-science-2026/
-│
-├── Pertemuan1_ANGGA-ANGGIEANIE_250401020172.ipynb   # Python Dasar
-├── Pertemuan2_ANGGA-ANGGIEANIE_250401020172.ipynb   # EDA & Pandas
-├── Pertemuan3_angga_anggieanie_250401020172.ipynb   # Data Cleaning
-├── Pertemuan4_Angga_Anggieanie_250401020172.ipynb   # Statistika
-├── Pertemuan5_Angga_Anggieanie_250401020172.ipynb   # Visualisasi
-├── Pertemuan6_Angga_Anggieanie_250401020172.ipynb   # Preprocessing
-├── Pertemuan7_Angga_Anggieanie_250401020172.ipynb   # Regresi Linear
 ├── README.md
-└── LICENSE
+├── Pertemuan4_Angga_Anggieanie_250401020172.ipynb   # Statistika & Analisis Data (Iris)
+├── Pertemuan5_Angga_Anggieanie_250401020172.ipynb   # Visualisasi Data (Penguins)
+├── dashboard_penguins.png                            # Dashboard statis Pertemuan 5
+├── Pertemuan6_Angga_Anggieanie_250401020172.ipynb   # Persiapan Data (Titanic)
+├── Pertemuan7_Angga_Anggieanie_250401020172.ipynb   # Regresi Linear (Gaji Sintetis)
+├── evaluasi_regresi.png                              # Plot evaluasi Pertemuan 7
+├── Pertemuan9_Angga_Anggieanie_250401020172.ipynb   # Klasifikasi (Breast Cancer)
+├── evaluasi_klasifikasi.png                          # Confusion matrix Pertemuan 9
+├── decision_tree_viz.png                             # Visualisasi pohon Pertemuan 9
+├── Pertemuan10_Angga_Anggieanie_250401020172.ipynb  # Random Forest & Imbalanced (Churn)
+├── evaluasi_churn.png                                 # Perbandingan skenario Pertemuan 10
+├── feature_importance_churn.png                       # Feature importance Pertemuan 10
+├── Pertemuan11_Angga_Anggieanie_250401020172.ipynb  # Clustering (Segmentasi Pelanggan)
+├── segmentasi_kmeans.png                              # Hasil K-Means Pertemuan 11
+└── dendrogram_pelanggan.png                           # Dendrogram Ward Pertemuan 11
 ```
 
 ---
 
-*Repository ini merupakan bagian dari tugas praktikum mata kuliah Pengantar Data Science, Program Studi PJJ Informatika, 2026.*
+## 🚀 Cara Menjalankan
 
+**Google Colab (direkomendasikan):**
+1. Buka file `.ipynb` di GitHub
+2. Klik tombol **"Open in Colab"** di bagian atas
+3. Jalankan semua cell: `Runtime > Run all`
+4. Semua library sudah tersedia di Colab — tidak perlu install manual
+
+**Lokal:**
+```bash
+pip install pandas numpy matplotlib seaborn scipy scikit-learn imbalanced-learn
+jupyter notebook
+```
+
+---
+
+## 📖 Referensi
+
+- Fisher, R. A. (1936). The use of multiple measurements in taxonomic problems.
+- McKinney, W. (2022). *Python for Data Analysis* (3rd ed.). O'Reilly.
+- VanderPlas, J. (2016). *Python Data Science Handbook*. O'Reilly.
+- Waskom, M. L. (2021). Seaborn: Statistical data visualization. *JOSS*, 6(60).
+- Knaflic, C. N. (2015). *Storytelling with Data*. Wiley.
+- Géron, A. (2022). *Hands-On Machine Learning* (3rd ed.). O'Reilly. [Bab 3, 6 & 9]
+- James, G., et al. (2021). *An Introduction to Statistical Learning* (2nd ed.). Springer. [Bab 4 & 12]
+- Breiman, L. (2001). Random Forests. *Machine Learning*, 45(1), 5–32.
+- Chawla, N. V., et al. (2002). SMOTE: Synthetic Minority Over-sampling Technique. *JAIR*, 16, 321–357.
+- MacQueen, J. (1967). Some methods for classification and analysis of multivariate observations.
+- Rousseeuw, P. J. (1987). Silhouettes: A graphical aid to cluster analysis. *J. Computational and Applied Mathematics*, 20, 53–65.
+- Arthur, D., & Vassilvitskii, S. (2007). k-means++: The Advantages of Careful Seeding.
+- scikit-learn Developers. (2024). *scikit-learn Documentation*.
+
+---
+
+*Repositori ini dibuat sebagai bagian dari tugas perkuliahan Pengantar Data Science, Program Studi Informatika.*
