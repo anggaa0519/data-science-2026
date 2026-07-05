@@ -9,7 +9,7 @@
 | **Kelas** | IF401 |
 | **Mata Kuliah** | Pengantar Data Science (200302305) |
 | **SKS** | 3 SKS |
-| **Koordinator** | Syahid Abdullah, S.Si, M.Kom |
+| **Dosen makul** | Syahid Abdullah, S.Si, M.Kom |
 | **Program Studi** | Informatika |
 
 ---
@@ -271,35 +271,11 @@ data-science-2026/
 ├── README.md
 ├── Pertemuan4_Angga_Anggieanie_250401020172.ipynb   # Statistika & Analisis Data (Iris)
 ├── Pertemuan5_Angga_Anggieanie_250401020172.ipynb   # Visualisasi Data (Penguins)
-├── dashboard_penguins.png                            # Dashboard statis Pertemuan 5
 ├── Pertemuan6_Angga_Anggieanie_250401020172.ipynb   # Persiapan Data (Titanic)
 ├── Pertemuan7_Angga_Anggieanie_250401020172.ipynb   # Regresi Linear (Gaji Sintetis)
-├── evaluasi_regresi.png                              # Plot evaluasi Pertemuan 7
 ├── Pertemuan9_Angga_Anggieanie_250401020172.ipynb   # Klasifikasi (Breast Cancer)
-├── evaluasi_klasifikasi.png                          # Confusion matrix Pertemuan 9
-├── decision_tree_viz.png                             # Visualisasi pohon Pertemuan 9
 ├── Pertemuan10_Angga_Anggieanie_250401020172.ipynb  # Random Forest & Imbalanced (Churn)
-├── evaluasi_churn.png                                 # Perbandingan skenario Pertemuan 10
-├── feature_importance_churn.png                       # Feature importance Pertemuan 10
 ├── Pertemuan11_Angga_Anggieanie_250401020172.ipynb  # Clustering (Segmentasi Pelanggan)
-├── segmentasi_kmeans.png                              # Hasil K-Means Pertemuan 11
-└── dendrogram_pelanggan.png                           # Dendrogram Ward Pertemuan 11
-```
-
----
-
-## 🚀 Cara Menjalankan
-
-**Google Colab (direkomendasikan):**
-1. Buka file `.ipynb` di GitHub
-2. Klik tombol **"Open in Colab"** di bagian atas
-3. Jalankan semua cell: `Runtime > Run all`
-4. Semua library sudah tersedia di Colab — tidak perlu install manual
-
-**Lokal:**
-```bash
-pip install pandas numpy matplotlib seaborn scipy scikit-learn imbalanced-learn
-jupyter notebook
 ```
 
 ---
